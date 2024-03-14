@@ -2,28 +2,24 @@
 
 using Microsoft.Extensions.DependencyInjection;
 
-var host = "http://localhost:81";
-var clientId = "695468c9-93f7-47ea-8622-85495b2e04f9";
-var accessKey = "password";
-
-if (args.Length > 0)
+if (args.Length == 3)
 {
     try
     {
-        host = args[0];
-        clientId = args[1];
-        accessKey = args[2];
+        var services = new ServiceCollection();
+        services.AddRemoteControlServices();
+        var provider = services.BuildServiceProvider();
+        var result = await provider.UseHeadlessClient(args[0], args[1], args[2]);
+
+        Console.WriteLine(result);
     }
     catch
     {
         Console.WriteLine("Invalid arguments to start the agent.");
-        return;
     }
 }
+else
+{
+    Console.WriteLine("Invalid arguments to start the agent.");
+}
 
-var services = new ServiceCollection();
-services.AddRemoteControlServices();
-var provider = services.BuildServiceProvider();
-var result = await provider.UseHeadlessClient(host, clientId, accessKey);
-
-Console.WriteLine(result);

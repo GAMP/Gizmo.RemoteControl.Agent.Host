@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Gizmo.RemoteControl.Agent\Gizmo.RemoteControl.Agent.Windows\Gizmo.RemoteControl.Agent.Windows.csproj" />
+    <ProjectReference Include="..\Submodules\Gizmo.RemoteControl.Agent\Gizmo.RemoteControl.Agent.Windows\Gizmo.RemoteControl.Agent.Windows.csproj" />
   </ItemGroup>
 
 </Project>
