@@ -1,8 +1,8 @@
 [submodule "Submodules/Gizmo.RemoteControl.Agent"]
 	path = Submodules/Gizmo.RemoteControl.Agent
 	url = https://github.com/GAMP/Gizmo.RemoteControl.Agent.git
-	branch = main
+	branch = fiature-remove remote dependency
 [submodule "Submodules/Gizmo.RemoteControl.Shared"]
 	path = Submodules/Gizmo.RemoteControl.Shared
 	url = https://github.com/GAMP/Gizmo.RemoteControl.Shared.git
-	branch = main
+	branch = fiature-remove remote dependency
